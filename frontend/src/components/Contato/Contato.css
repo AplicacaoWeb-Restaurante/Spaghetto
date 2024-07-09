@@ -1,0 +1,106 @@
+/* Contato.css */
+
+.contato {
+    text-align: center;
+    margin: 50px auto; /* Centraliza verticalmente e ajusta margens */
+    border: 1px solid var(--persian-red);
+    border-radius: 10px;
+    padding: 20px;
+    width: 40rem;
+    background-color: var(--antiflash-white);
+    color: var(--persian-red);
+    font-size: 20px;
+    font-family: 'Montserrat', Helvetica;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contato h2 {
+    color: var(--persian-red);
+    margin-bottom: 15px;
+}
+
+.contato p {
+    font-size: 18px;
+    color: var(--cadet-gray);
+    margin: 10px 0;
+}
+
+.contato-form {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cadet-gray);
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.contato-form textarea {
+    height: 100px; /* Ajuste conforme necessário */
+}
+
+.contato-info button {
+    color: var(--antiflash-white);
+    background-color: var(--persian-red);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contato-info button:hover {
+    background-color: var(--darker-green);
+    transition: all 0.3s ease;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    border-color: var(--darker-green); 
+    color: black; 
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .contato {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .contato-info button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contato {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .contato-info button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}

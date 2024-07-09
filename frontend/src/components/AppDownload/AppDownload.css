@@ -1,0 +1,37 @@
+.app-download{
+    margin: auto auto;
+    margin-top: 100px;
+    font-size: max(2vw,5px);
+    text-align: center;
+    font-weight: 500;
+    font-family:  'Arial Narrow Bold', sans-serif;
+
+}
+
+.app-download-platforms{
+    display: flex;
+    justify-content: center;
+    gap: max(1vw,10px);
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+.app-download-platforms img{
+    width: max(1vw,100px);
+    max-width: 140px;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
+.app-download-platforms img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.29);
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 4px;
+    
+
+}

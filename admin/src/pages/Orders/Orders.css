@@ -1,0 +1,129 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    border: 1px solid;
+    padding: 20px;
+    margin: 20px 0px;
+    font-size: 14px;
+    color: #505050;
+    position: relative;
+}
+
+.order-item-food,
+.order-item-name {
+    font-weight: 600;
+}
+
+.order-item-name {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.order-item-address {
+    margin-bottom: 10px;
+}
+
+.order-item select {
+    background-color: #ffffffa4;
+    border: 1px solid rgba(0, 0, 0, 0.372);
+    width: max(10vw, 120px);
+    padding: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.filter-button {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    background-color: #0056b3;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.order-item-preparando {
+    border-color: orange;
+    background-color: rgb(255, 240, 212);
+}
+
+.order-item-entrega {
+    border-color: rgb(208, 208, 0);
+    background-color: rgb(255, 255, 174);
+}
+
+.order-item-entregue {
+    border-color: green;
+    background-color: rgb(190, 249, 190);
+}
+
+.status-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.action-icon-container {
+    position: absolute;
+    bottom: 20px;
+    /* Distância do canto inferior */
+    right: 36px;
+    /* Distância do canto direito */
+}
+
+.action-icon-container img:hover {
+    cursor: pointer;
+    background-color: #f08787;
+    border-radius: 10px;
+    border: 1px solid rgb(148, 26, 26);
+}
+
+.action-icon {
+    cursor: pointer;
+    height: 30px;
+}
+
+
+
+@media (max-width: 1000px) {
+    .order-item {
+        font-size: 12px;
+        grid-template-columns: 0.5fr 2fr 1fr;
+        padding: 15px 8px;
+    }
+
+    .order-item select {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .order-item img {
+        width: 40px;
+    }
+
+    .action-icon-container {
+        position: absolute;
+        bottom: 15px;
+        /* Distância do canto inferior */
+        right: 15px;
+        /* Distância do canto direito */
+    }
+}

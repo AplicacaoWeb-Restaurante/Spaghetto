@@ -1,0 +1,69 @@
+.header{
+    height: 34vw;
+    margin: 30px auto;
+    /* background: url('/header_img.png') no-repeat; */
+    background: url('https://cdn.animaapp.com/projects/667c95ad3c411c7e6951e65a/releases/667dcdd92acc20f4982671ad/img/image-2.png') no-repeat;
+    /* background: url('https://unsplash.com/pt-br/fotografias/uma-pizza-de-calabresa-cortada-em-fatias-em-uma-mesa-de-madeira-mIESW2fwM3s') no-repeat; */
+    background-size:cover;
+    position: relative;
+}
+.header-contents{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+.header-contents h2{
+    font-weight:500;
+    color: black;
+    font-size: max(4.5vw,22px);
+}
+
+.header-contents .header-highlight{
+    color: var(--persian-red);
+}
+.header-contents p{
+    color: black;
+    font-size: 1vw;
+}
+.header-contents h4{
+    border: none;
+    color: var(--antiflash-white);
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background: var(--persian-red);
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.header-contents h4:hover{
+
+    background-color: rgb(92, 2, 2);
+    color: white;
+    border: none;
+}
+@media (max-width:1050px) {
+    .header{
+        height: 38vw;
+    }
+    .header-contents{
+        max-width: 45%;
+    }
+}
+@media(max-width:750px){
+    .header-contents{
+        max-width: 55%;
+    }
+    .header-contents p{
+       display: none;
+    }
+    .header-contents h4{
+        padding: 2vw 4vw;
+    }
+}

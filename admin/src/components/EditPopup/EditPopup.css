@@ -1,0 +1,97 @@
+.edit-popup {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(7px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000090;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Certifica-se de que está acima de outros elementos */
+}
+
+.edit-popup-container {
+  width: 90%; /* Ajusta a largura conforme necessário */
+  max-width: 600px; /* Tamanho máximo do pop-up */
+  max-height: 80%; /* Tamanho máximo em altura do pop-up */
+  overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura máxima */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeIn 0.5s;
+  color: #808080;
+}
+
+.edit-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.edit-popup-title img {
+  width: 16px;
+  cursor: pointer;
+}
+
+.edit-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edit-popup-inputs input,
+.edit-popup-inputs select,
+.edit-popup-inputs textarea {
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: -10px;
+}
+
+.edit-popup-container button {
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: #009b05;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Espaço extra entre a imagem e o próximo campo */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.459);
+}
+
+@media (max-width: 600px) {
+  .list-table-format {
+      grid-template-columns: 1fr 3fr 1fr 1fr;
+      gap: 15px;
+  }
+
+  .list-table-format.title {
+      display: none;
+  }
+}
