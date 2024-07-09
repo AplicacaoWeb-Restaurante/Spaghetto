@@ -20,4 +20,6 @@ node_modules
 *.njsproj
 *.sln
 *.sw?
+
+# Arquivos .env
 .env
