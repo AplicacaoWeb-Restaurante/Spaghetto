@@ -22,4 +22,4 @@ node_modules
 *.sw?
 
 # Arquivos .env
-backend/.env
+*.env
