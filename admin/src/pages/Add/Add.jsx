@@ -82,7 +82,7 @@ const Add = () => {
           <input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Digite aqui' required />
         </div>
         <div className='add-product-status flex-col'>
-          <p>Status do produto</p>
+          <p>Visível no site</p>
           <label className='toggle-switch'>
             <input name='status' type='checkbox' checked={data.status} onChange={onChangeHandler} />
             <span className='slider'></span>

@@ -53,7 +53,7 @@ const PlaceOrder = () => {
                 window.location.replace(session_url);
             }
             else {
-                toast.error("Something Went Wrong")
+                toast.error("Algo deu errado")
             }
         }
         else{
@@ -64,7 +64,7 @@ const PlaceOrder = () => {
                 setCartItems({});
             }
             else {
-                toast.error("Something Went Wrong")
+                toast.error("Algo deu errado")
             }
         }
 
@@ -72,7 +72,7 @@ const PlaceOrder = () => {
 
     useEffect(() => {
         if (!token) {
-            toast.error("to place an order sign in first")
+            toast.error("Para fazer um pedido, primeiro esteja logado.")
             navigate('/cart')
         }
         else if (getTotalCartAmount() === 0) {

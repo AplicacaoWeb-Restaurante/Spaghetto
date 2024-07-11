@@ -51,6 +51,10 @@
     position: relative;
 }
 
+.navbar-search-icon:hover {
+    cursor: pointer;
+}
+
 .navbar-search-icon .dot {
     position: absolute;
     min-width: 10px;
@@ -95,6 +99,10 @@
 
 .navbar-profile {
     position: relative;
+}
+
+.navbar-profile:hover {
+    cursor: pointer;
 }
 
 .navbar-profile-dropdown {
