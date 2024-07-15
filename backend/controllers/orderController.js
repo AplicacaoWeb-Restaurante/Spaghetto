@@ -153,21 +153,34 @@ const verifyOrder = async (req, res) => {
     }
 };
 
+// Função usada para remover um pedido
 const removeOrder = async (req, res) => {
     try {
-      const orderId = req.params.id;
-      const order = await orderModel.findById(orderId);
-  
-      if (!order) {
-        return res.json({ success: false, message: "Pedido não encontrado" });
-      }
-  
-      await orderModel.findByIdAndDelete(orderId);
-      res.json({ success: true, message: "Produto removido" });
+        // Obtém o ID do pedido a partir dos parâmetros da requisição
+        const orderId = req.params.id;
+        
+        // Busca o pedido pelo ID
+        const order = await orderModel.findById(orderId);
+        
+        // Verifica se o pedido existe
+        if (!order) {
+            // Se o pedido não for encontrado, responde com falha e uma mensagem de "Pedido não encontrado"
+            return res.json({ success: false, message: "Pedido não encontrado" });
+        }
+        
+        // Remove o pedido pelo ID
+        await orderModel.findByIdAndDelete(orderId);
+        
+        // Responde com sucesso e uma mensagem de "Produto removido"
+        res.json({ success: true, message: "Produto removido" });
     } catch (error) {
-      console.log(error);
-      res.json({ success: false, message: "Erro ao remover pedido" });
+        // Em caso de erro, loga o erro no console
+        console.log(error);
+        
+        // Responde com falha e uma mensagem de "Erro ao remover pedido"
+        res.json({ success: false, message: "Erro ao remover pedido" });
     }
-  };
+};
+
 
 export { placeOrder, listOrders, userOrders, updateStatus, verifyOrder, placeOrderCod, removeOrder };

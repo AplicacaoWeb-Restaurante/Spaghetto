@@ -5,6 +5,7 @@ import axios from 'axios';
 import { assets, url, currency } from '../../assets/assets';
 
 const Order = () => {
+  // Definição dos estados
   const [orders, setOrders] = useState([]);
   const [filters, setFilters] = useState({
     name: '',
@@ -14,6 +15,7 @@ const Order = () => {
   });
   const [showFilters, setShowFilters] = useState(false);
 
+  // Função para buscar todos os pedidos
   const fetchAllOrders = async () => {
     const response = await axios.get(`${url}/api/order/list`);
     if (response.data.success) {
@@ -23,6 +25,7 @@ const Order = () => {
     }
   };
 
+  // Função para atualizar o status do pedido
   const statusHandler = async (event, orderId) => {
     const response = await axios.post(`${url}/api/order/status`, {
       orderId,
@@ -33,6 +36,7 @@ const Order = () => {
     }
   };
 
+  // Função para manipular mudanças nos filtros
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters((prevFilters) => ({
@@ -41,10 +45,12 @@ const Order = () => {
     }));
   };
 
+  // Função para alternar a exibição dos filtros
   const toggleFilters = () => {
     setShowFilters(!showFilters);
   };
 
+  // Filtragem dos pedidos com base nos filtros definidos
   const filteredOrders = orders.filter((order) => {
     const meetsMinPriceCriteria = filters.minPrice === '' || order.amount >= parseFloat(filters.minPrice);
     const meetsMaxPriceCriteria = filters.maxPrice === '' || order.amount <= parseFloat(filters.maxPrice);
@@ -54,6 +60,7 @@ const Order = () => {
     return meetsMinPriceCriteria && meetsMaxPriceCriteria && meetsNameCriteria && meetsStatusCriteria;
   });
 
+  // Função para obter a classe CSS baseada no status do pedido
   const getOrderClass = (status) => {
     switch (status) {
       case 'Preparando pedido':
@@ -67,6 +74,7 @@ const Order = () => {
     }
   };
 
+  // Função para remover um pedido
   const removeOrder = async (orderId) => {
     const response = await axios.delete(`${url}/api/order/delete/${orderId}`);
     if (response.data.success) {
@@ -77,6 +85,7 @@ const Order = () => {
     }
   };
 
+  // Buscar todos os pedidos ao carregar o componente
   useEffect(() => {
     fetchAllOrders();
   }, []);

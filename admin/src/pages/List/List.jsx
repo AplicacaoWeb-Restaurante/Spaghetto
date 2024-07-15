@@ -18,6 +18,7 @@ const List = () => {
   });
   const [showFilters, setShowFilters] = useState(false);
 
+  // Função para buscar a lista de produtos
   const fetchList = async () => {
     const response = await axios.get(`${url}/api/food/list`);
     if (response.data.success) {
@@ -27,6 +28,7 @@ const List = () => {
     }
   };
 
+  // Função para remover um produto
   const removeFood = async (foodId) => {
     const response = await axios.delete(`${url}/api/food/remove/${foodId}`);
     await fetchList();
@@ -37,11 +39,13 @@ const List = () => {
     }
   };
 
+  // Função para abrir o popup de edição
   const handleEdit = (item) => {
     setEditProduct(item);
     setShowEditPopup(true);
   };
 
+  // Função para alternar o status de visibilidade do produto
   const toggleStatus = async (item) => {
     const updatedStatus = !item.status;
     const response = await axios.put(`${url}/api/food/updateStatus/${item._id}`, { status: updatedStatus });
@@ -53,6 +57,7 @@ const List = () => {
     }
   };
 
+  // Função para alternar a promoção do produto
   const togglePromotion = async (item) => {
     const updatedPromotion = !item.promotion;
     const response = await axios.put(`${url}/api/food/updatePromotion/${item._id}`, { promotion: updatedPromotion });
@@ -64,6 +69,7 @@ const List = () => {
     }
   };
 
+  // Função para lidar com mudanças nos filtros
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters((prevFilters) => ({
@@ -72,10 +78,12 @@ const List = () => {
     }));
   };
 
+  // Função para mostrar/ocultar filtros
   const toggleFilters = () => {
     setShowFilters(!showFilters);
   };
 
+  // Filtragem da lista com base nos filtros
   const filteredList = list.filter((item) => {
     const meetsNameCriteria = filters.name === '' || item.name.toLowerCase().includes(filters.name.toLowerCase());
     const meetsCategoryCriteria = filters.category === '' || item.category.toLowerCase().includes(filters.category.toLowerCase());
@@ -85,6 +93,7 @@ const List = () => {
     return meetsNameCriteria && meetsCategoryCriteria && meetsMinPriceCriteria && meetsMaxPriceCriteria;
   });
 
+  // Carregar a lista ao montar o componente
   useEffect(() => {
     fetchList();
   }, []);
