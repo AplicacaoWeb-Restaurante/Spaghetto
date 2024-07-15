@@ -78,6 +78,15 @@ $ npm run dev
   ➜  press h + enter to show help
 ````
 
+## Preview
+Uma breve apresentação da interface do site de pedidos:
+
+<img alt="gif_site" title="Spaghetto" src="./frontend/src/assets/gif_github/Animação.gif">
+
+Uma breve apresentação da interface do site para gerência:
+
+<img alt="gif_site_admin" title="Spaghetto_admin" src="./frontend/src/assets/gif_github/Animação_2.gif">
+
 ## Autores
 <li>Fernanda Coimbra</li>
 <li>Heitor Riguete</li>
