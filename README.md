@@ -1,49 +1,46 @@
-
-
 <h1 align="center">
     <img alt="logo" title="Readme" src="./frontend/src/assets/logo.svg" height=150px>
 </h1>
 
 <p align="center">
-    <a href="#sobre">Sobre</a> •
-    <a href="#tecnologias">Tecnologias</a> •
-    <a href="#pre-requisitos">Pré-Requisitos</a> •
+    <a href="#sobre">Sobre</a>•
+    <a href="#tecnologias">Tecnologias</a>•
+    <a href="#pre-requisitos">Pré-requisitos</a>•
     <a href="#autores">Autores</a>
 </p>
 
 
-# Sobre
+## Sobre
 <p align="center">Spaghetto foi o nome escolhido pelos integrantes do grupo 4 para a empresa fictícia de delivery de pratos italianos, durante a realização de um projeto proposto no curso Rio Pomba Valley.<br>
 A proposta do projeto foi desenvolver uma aplicação web para pedidos online em restaurantes, permitindo aos clientes escolher itens do menu, adicionar esses itens ao carrinho de compras e realizar o processamento de pagamento além de trazer funcionalidades de gerenciamento de pedidos e produtos.
 </p>
 
-# Tecnologias
+## Tecnologias
 <h3><li>Front-end 🎨</li></h3>
 
-<img alt="react" title="React" src="./frontend/src/assets/logos/react.png" height=25px>
-<img alt="html" title="html" src="./frontend/src/assets/logos/html.png" height=25px>
-<img alt="css" title="css" src="./frontend/src/assets/logos/css.png" height=25px>
-<img alt="javascript" title="javascript" src="./frontend/src/assets/logos/javascript.png" height=25px>
-<img alt="react" title="React" src="./frontend/src/assets/logos/toastify.png" height=25px>
+<p align="left">
+  <img alt="react" title="React" src="./frontend/src/assets/logos/react.png" height="25px">
+  <img alt="html" title="HTML" src="./frontend/src/assets/logos/html.png" height="25px">
+  <img alt="css" title="CSS" src="./frontend/src/assets/logos/css.png" height="25px">
+  <img alt="javascript" title="JavaScript" src="./frontend/src/assets/logos/javascript.png" height="25px">
+  <img alt="toastify" title="Toastify" src="./frontend/src/assets/logos/toastify.png" height="25px">
+</p>
 
-<h3><li>Back-end ⚙</li></h3>
+<h3><li>Back-end 🎨</li></h3>
+<p align="left">
+  <img alt="nodejs" title="Node" src="./frontend/src/assets/logos/nodejs.png" height="25px">
+  <img alt="express" title="Express" src="./frontend/src/assets/logos/express.png" height="25px">
+  <img alt="mongodb" title="MongoDB" src="./frontend/src/assets/logos/mongodb.png" height="45px">
+  <img alt="stripe" title="Stripe" src="./frontend/src/assets/logos/stripe.png" height="25px">
+</p>
 
-<img alt="nodejs" title="Node" src="./frontend/src/assets/logos/nodejs.png" height=25px>
-<img alt="express" title="Express" src="./frontend/src/assets/logos/express.png" height=25px>
-<img alt="nodejs" title="Node" src="./frontend/src/assets/logos/jwt.svg" height=25px>
-<img alt="nodejs" title="Node" src="./frontend/src/assets/logos/mongodb.png" height=35px>
-<img alt="nodejs" title="Node" src="./frontend/src/assets/logos/stripe.png" height=35px>
-<br>
-<br>
+## Pré-requisitos
 
-# Pre requisitos 
-
-<p> Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+✅ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com/), [Node.js](https://nodejs.org/pt).
-*[sobre]
+
 
 ````bash
-
 # Clone este repositório
 $ git clone <https://github.com/AplicacaoWeb-Restaurante/Spaghetto.git>
 
@@ -81,7 +78,7 @@ $ npm run dev
   ➜  press h + enter to show help
 ````
 
-# Autores
+## Autores
 <li>Fernanda Coimbra</li>
 <li>Heitor Riguete</li>
 <li>Joyce Masalla</li>
